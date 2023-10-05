@@ -1,124 +1,420 @@
 <template>
     <main class="p-4 md:ml-64 h-auto">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
-            <div class="p-5 bg-white rounded-lg">
-                <div class="flex items-center space-x-4">
-                    <div>
-                        <div class="flex items-center justify-center w-12 h-12 rounded-full bg-fuchsia-50 text-fuchsia-400">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.3333 9.33334H28M28 9.33334V20M28 9.33334L17.3333 20L12 14.6667L4 22.6667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
+        <div id="content" class="bg-white/10 col-span-9 rounded-lg p-6">
+            <div id="24h">
+                <h1 class="font-bold py-4 uppercase">Last 24h Statistics</h1>
+                <div id="stats" class="grid gird-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-gray-300/50 to-white/5 p-6 rounded-lg">
+                        <div class="flex flex-row space-x-4 items-center">
+                            <div id="stats-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-10 h-10 text-black">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-black text-sm font-medium uppercase leading-4">Users</p>
+                                <p class="text-black font-bold text-2xl inline-flex items-center space-x-2">
+                                    <span>+28</span>
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                                        </svg>
+
+                                    </span>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <div class="text-gray-400">Total Sales</div>
-                        <div class="text-2xl font-bold text-gray-900">$9850.90</div>
+                    <div class="bg-gray-300/50 p-6 rounded-lg">
+                        <div class="flex flex-row space-x-4 items-center">
+                            <div id="stats-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-10 h-10 text-black">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+
+                            </div>
+                            <div>
+                                <p class="text-black text-sm font-medium uppercase leading-4">Income</p>
+                                <p class="text-black font-bold text-2xl inline-flex items-center space-x-2">
+                                    <span>$2,873.88</span>
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                                        </svg>
+
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-300/50 p-6 rounded-lg">
+                        <div class="flex flex-row space-x-4 items-center">
+                            <div id="stats-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-10 h-10 text-black">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                                </svg>
+
+                            </div>
+                            <div>
+                                <p class="text-black text-sm font-medium uppercase leading-4">Invoices</p>
+                                <p class="text-black font-bold text-2xl inline-flex items-center space-x-2">
+                                    <span>+79</span>
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                                        </svg>
+
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="p-5 bg-white rounded-lg">
-                <div class="flex items-center space-x-4">
-                    <div>
-                        <div class="flex items-center justify-center w-12 h-12 rounded-full bg-cyan-50 text-cyan-400">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.52325 6.61231C10.2911 5.20443 12.4206 4.32434 14.6667 4.07333V17.3333H27.9267C27.6757 19.5794 26.7956 21.7089 25.3877 23.4767C23.9798 25.2446 22.1013 26.5791 19.9685 27.3265C17.8357 28.0739 15.5351 28.2039 13.3317 27.7015C11.1282 27.1991 9.11142 26.0847 7.51336 24.4866C5.91529 22.8886 4.80094 20.8718 4.29854 18.6683C3.79614 16.4649 3.92612 14.1643 4.67352 12.0315C5.42092 9.89866 6.75535 8.0202 8.52325 6.61231Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path d="M20 12H27.3173C26.7188 10.3128 25.7513 8.78047 24.4854 7.5146C23.2195 6.24873 21.6872 5.28125 20 4.68268V12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
+            <div id="last-incomes">
+                <h1 class="font-bold py-4 uppercase">Last 24h incomes</h1>
+                <div id="stats" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                    <div class="bg-gray-300/50 to-white/5 rounded-lg">
+                        <div class="flex flex-row items-center">
+                            <div class="text-3xl p-4">💰</div>
+                            <div class="p-2">
+                                <p class="text-xl font-bold">348$</p>
+                                <p class="text-gray-500 font-medium">Amber Gates</p>
+                                <p class="text-gray-500 text-sm">24 Nov 2022</p>
+                            </div>
+                        </div>
+                        <div class="border-t border-white/5 p-4">
+                            <a href="#" class="inline-flex space-x-2 items-center text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                                </svg>
+                                <span>Info</span>
+                            </a>
                         </div>
                     </div>
-                    <div>
-                        <div class="text-gray-400">Net Revenue</div>
-                        <div class="text-2xl font-bold text-gray-900">$7520.50</div>
+                    <div class="bg-gray-300/50 to-white/5 rounded-lg">
+                        <div class="flex flex-row items-center">
+                            <div class="text-3xl p-4">💰</div>
+                            <div class="p-2">
+                                <p class="text-xl font-bold">68$</p>
+                                <p class="text-gray-500 font-medium">Maia Kipper</p>
+                                <p class="text-gray-500 text-sm">23 Nov 2022</p>
+                            </div>
+                        </div>
+                        <div class="border-t border-white/5 p-4">
+                            <a href="#" class="inline-flex space-x-2 items-center text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                                </svg>
+                                <span>Info</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-gray-300/50 to-white/5 rounded-lg">
+                        <div class="flex flex-row items-center">
+                            <div class="text-3xl p-4">💰</div>
+                            <div class="p-2">
+                                <p class="text-xl font-bold">12$</p>
+                                <p class="text-gray-500 font-medium">Oprah Milles</p>
+                                <p class="text-gray-500 text-sm">23 Nov 2022</p>
+                            </div>
+                        </div>
+                        <div class="border-t border-white/5 p-4">
+                            <a href="#" class="inline-flex space-x-2 items-center text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                                </svg>
+                                <span>Info</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-gray-300/50 to-white/5 rounded-lg">
+                        <div class="flex flex-row items-center">
+                            <div class="text-3xl p-4">💰</div>
+                            <div class="p-2">
+                                <p class="text-xl font-bold">105$</p>
+                                <p class="text-gray-500 font-medium">Jonny Nite</p>
+                                <p class="text-gray-500 text-sm">23 Nov 2022</p>
+                            </div>
+                        </div>
+                        <div class="border-t border-white/5 p-4">
+                            <a href="#" class="inline-flex space-x-2 items-center text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                                </svg>
+                                <span>Info</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-gray-300/50 to-white/5 rounded-lg">
+                        <div class="flex flex-row items-center">
+                            <div class="text-3xl p-4">💰</div>
+                            <div class="p-2">
+                                <p class="text-xl font-bold">52$</p>
+                                <p class="text-gray-500 font-medium">Megane Baile</p>
+                                <p class="text-gray-500 text-sm">22 Nov 2022</p>
+                            </div>
+                        </div>
+                        <div class="border-t border-white/5 p-4">
+                            <a href="#" class="inline-flex space-x-2 items-center text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                                </svg>
+                                <span>Info</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-gray-300/50 to-white/5 rounded-lg">
+                        <div class="flex flex-row items-center">
+                            <div class="text-3xl p-4">💰</div>
+                            <div class="p-2">
+                                <p class="text-xl font-bold">28$</p>
+                                <p class="text-gray-500 font-medium">Tony Ankel</p>
+                                <p class="text-gray-500 text-sm">22 Nov 2022</p>
+                            </div>
+                        </div>
+                        <div class="border-t border-white/5 p-4">
+                            <a href="#" class="inline-flex space-x-2 items-center text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                                </svg>
+                                <span>Info</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="p-5 bg-white rounded-lg">
-                <div class="flex items-center space-x-4">
-                    <div>
-                        <div class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-50 text-amber-400">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.7712 13.1046C20.7714 12.1044 21.3333 10.7478 21.3333 9.33333C21.3333 7.91885 20.7714 6.56229 19.7712 5.5621C18.771 4.5619 17.4145 4 16 4C14.5855 4 13.2289 4.5619 12.2288 5.5621C11.2286 6.56229 10.6667 7.91885 10.6667 9.33333C10.6667 10.7478 11.2286 12.1044 12.2288 13.1046C13.2289 14.1048 14.5855 14.6667 16 14.6667C17.4145 14.6667 18.771 14.1048 19.7712 13.1046Z" stroke="#FBBF24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path d="M9.40033 21.4003C11.1507 19.65 13.5246 18.6667 16 18.6667C18.4753 18.6667 20.8493 19.65 22.5997 21.4003C24.35 23.1507 25.3333 25.5246 25.3333 28H6.66666C6.66666 25.5246 7.64999 23.1507 9.40033 21.4003Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="text-gray-400">Customers</div>
-                        <div class="text-2xl font-bold text-gray-900">1375</div>
-                    </div>
+            <div id="last-users">
+                <h1 class="font-bold py-4 uppercase">Last 24h users</h1>
+                <div class="overflow-x-scroll">
+                    <table class="w-full whitespace-nowrap">
+                        <thead class="bg-gray-300/50">
+                            <th class="text-left py-3 px-2 rounded-l-lg">Name</th>
+                            <th class="text-left py-3 px-2">Email</th>
+                            <th class="text-left py-3 px-2">Group</th>
+                            <th class="text-left py-3 px-2">Status</th>
+                            <th class="text-left py-3 px-2 rounded-r-lg">Actions</th>
+                        </thead>
+                        <tr class="border-b border-gray-700">
+                            <td class="py-3 px-2 font-bold">
+                                <div class="inline-flex space-x-3 items-center">
+                                    <span><img class="rounded-full w-8 h-8"
+                                            src="https://images.generated.photos/tGiLEDiAbS6NdHAXAjCfpKoW05x2nq70NGmxjxzT5aU/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/OTM4ODM1LmpwZw.jpg"
+                                            alt=""></span>
+                                    <span>Thai Mei</span>
+                                </div>
+                            </td>
+                            <td class="py-3 px-2">thai.mei@abc.com</td>
+                            <td class="py-3 px-2">User</td>
+                            <td class="py-3 px-2">Approved</td>
+                            <td class="py-3 px-2">
+                                <div class="inline-flex items-center space-x-3">
+                                    <a href="" title="Edit" class="hover:text-black"><svg xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                            class="w-5 h-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                                        </svg>
+                                    </a>
+                                    <a href="" title="Edit password" class="hover:text-black"><svg
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                                        </svg>
+                                    </a>
+                                    <a href="" title="Suspend user" class="hover:text-black"><svg
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-700">
+                            <td class="py-3 px-2 font-bold">
+                                <div class="inline-flex space-x-3 items-center">
+                                    <span><img class="rounded-full w-8 h-8"
+                                            src="https://images.generated.photos/tGiLEDiAbS6NdHAXAjCfpKoW05x2nq70NGmxjxzT5aU/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/OTM4ODM1LmpwZw.jpg"
+                                            alt=""></span>
+                                    <span>Thai Mei</span>
+                                </div>
+                            </td>
+                            <td class="py-3 px-2">thai.mei@abc.com</td>
+                            <td class="py-3 px-2">User</td>
+                            <td class="py-3 px-2">Approved</td>
+                            <td class="py-3 px-2">
+                                <div class="inline-flex items-center space-x-3">
+                                    <a href="" title="Edit" class="hover:text-black"><svg xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                            class="w-5 h-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                                        </svg>
+                                    </a>
+                                    <a href="" title="Edit password" class="hover:text-black"><svg
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                                        </svg>
+                                    </a>
+                                    <a href="" title="Suspend user" class="hover:text-black"><svg
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-700">
+                            <td class="py-3 px-2 font-bold">
+                                <div class="inline-flex space-x-3 items-center">
+                                    <span><img class="rounded-full w-8 h-8"
+                                            src="https://images.generated.photos/tGiLEDiAbS6NdHAXAjCfpKoW05x2nq70NGmxjxzT5aU/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/OTM4ODM1LmpwZw.jpg"
+                                            alt=""></span>
+                                    <span>Thai Mei</span>
+                                </div>
+                            </td>
+                            <td class="py-3 px-2">thai.mei@abc.com</td>
+                            <td class="py-3 px-2">User</td>
+                            <td class="py-3 px-2">Approved</td>
+                            <td class="py-3 px-2">
+                                <div class="inline-flex items-center space-x-3">
+                                    <a href="" title="Edit" class="hover:text-black"><svg xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                            class="w-5 h-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                                        </svg>
+                                    </a>
+                                    <a href="" title="Edit password" class="hover:text-black"><svg
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                                        </svg>
+                                    </a>
+                                    <a href="" title="Suspend user" class="hover:text-black"><svg
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-700">
+                            <td class="py-3 px-2 font-bold">
+                                <div class="inline-flex space-x-3 items-center">
+                                    <span><img class="rounded-full w-8 h-8"
+                                            src="https://images.generated.photos/niCVbIBAm4hahzwS83HoEtcVEIactkKohOzgXWYY4lM/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NTk4ODczLmpwZw.jpg"
+                                            alt=""></span>
+                                    <span>Marquez Spineli</span>
+                                </div>
+                            </td>
+                            <td class="py-3 px-2">marquez.spineli@cba.com</td>
+                            <td class="py-3 px-2">User</td>
+                            <td class="py-3 px-2">Approved</td>
+                            <td class="py-3 px-2">
+                                <div class="inline-flex items-center space-x-3">
+                                    <a href="" title="Edit" class="hover:text-black"><svg xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                            class="w-5 h-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                                        </svg>
+                                    </a>
+                                    <a href="" title="Edit password" class="hover:text-black"><svg
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                                        </svg>
+                                    </a>
+                                    <a href="" title="Suspend user" class="hover:text-black"><svg
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-800">
+                            <td class="py-3 px-2 font-bold">
+                                <div class="inline-flex space-x-3 items-center">
+                                    <span><img class="rounded-full w-8 h-8"
+                                            src="https://images.generated.photos/f_xU7q780YXiKG7IwKVV05eU6Sj2nIodEkN1S8GyM2M/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NDk2MTc4LmpwZw.jpg"
+                                            alt=""></span>
+                                    <span>Mark Spike</span>
+                                </div>
+                            </td>
+                            <td class="py-3 px-2">mark.spike@abc.com</td>
+                            <td class="py-3 px-2">Administrator</td>
+                            <td class="py-3 px-2">Approved</td>
+                            <td class="py-3 px-2">
+                                <div class="inline-flex items-center space-x-3">
+                                    <a href="" title="Edit" class="hover:text-black"><svg xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                            class="w-5 h-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                                        </svg>
+                                    </a>
+                                    <a href="" title="Edit password" class="hover:text-black"><svg
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                                        </svg>
+                                    </a>
+                                    <a href="" title="Suspend user" class="hover:text-black"><svg
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+
+
+                    </table>
                 </div>
             </div>
-            <div class="p-5 bg-white rounded-lg">
-                <div class="flex items-center space-x-4">
-                    <div>
-                        <div class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-50 text-emerald-400">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 25.3333V17.3333C12 16.6261 11.719 15.9478 11.219 15.4477C10.7189 14.9476 10.0406 14.6667 9.33333 14.6667H6.66667C5.95942 14.6667 5.28115 14.9476 4.78105 15.4477C4.28095 15.9478 4 16.6261 4 17.3333V25.3333C4 26.0406 4.28095 26.7189 4.78105 27.219C5.28115 27.719 5.95942 28 6.66667 28H9.33333C10.0406 28 10.7189 27.719 11.219 27.219C11.719 26.7189 12 26.0406 12 25.3333ZM12 25.3333V12C12 11.2928 12.281 10.6145 12.781 10.1144C13.2811 9.61428 13.9594 9.33333 14.6667 9.33333H17.3333C18.0406 9.33333 18.7189 9.61428 19.219 10.1144C19.719 10.6145 20 11.2928 20 12V25.3333M12 25.3333C12 26.0406 12.281 26.7189 12.781 27.219C13.2811 27.719 13.9594 28 14.6667 28H17.3333C18.0406 28 18.7189 27.719 19.219 27.219C19.719 26.7189 20 26.0406 20 25.3333M20 25.3333V6.66667C20 5.95942 20.281 5.28115 20.781 4.78105C21.2811 4.28095 21.9594 4 22.6667 4H25.3333C26.0406 4 26.7189 4.28095 27.219 4.78105C27.719 5.28115 28 5.95942 28 6.66667V25.3333C28 26.0406 27.719 26.7189 27.219 27.219C26.7189 27.719 26.0406 28 25.3333 28H22.6667C21.9594 28 21.2811 27.719 20.781 27.219C20.281 26.7189 20 26.0406 20 25.3333Z" stroke="currentColor " stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="text-gray-400">MRR</div>
-                        <div class="text-2xl font-bold text-gray-900">$250.00</div>
-                    </div>
-                </div>
-            </div>
+
         </div>
-        <div class="grid grid-cols-2 gap-4 mb-4">
-            <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
-            <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
-            <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
-            <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
-        </div>
-        <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-96 mb-4"></div>
-        <div class="grid grid-cols-2 gap-4">
-            <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
-            <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
-            <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
-            <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
-        </div>
-        
     </main>
 </template>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
-
-.bg-primary-color-grayish-blue {
-    background: hsl(217, 19%, 35%);
-}
-.bg-primary-color-blue {
-    background: hsl(217, 90%, 31%);
-}
-.bg-primary-color-white {
-    background: hsl(0, 0%, 100%);
-}
-
-.primary-color-blackish-blue {
-    color: rgb(25,33,46);
-}
-
-.primary-color-blackish-blue-opacity{
-    color: rgba(25,33,46,0.5);
-}
-
-.color-neutral-light-gray{
-    color: hsl(0, 0%, 81%);
-}
-
-.color-neutral-grayish-blue{
-    color: hsl(210, 46%, 95%);
-}
-
-body{
-    font-size: 13px;
-    font-family: 'Barlow Semi Condensed', sans-serif;
-}
-
-h1{
-font-weight: 600;
-}
-
-h2,p{
-font-weight: 500;
-}
-</style>
